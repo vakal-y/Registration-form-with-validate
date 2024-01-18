@@ -1,0 +1,133 @@
+body {
+    font-size  : 18px;
+    font-weight: 300;
+}
+
+a,
+u {
+    text-decoration: none;
+}
+
+h2 {
+    margin: 1rem auto;
+}
+
+.container-wrap {
+    width    : 90%;
+    max-width: 1440px;
+
+    display       : flex;
+    flex-direction: column;
+    margin        : 0 auto;
+}
+
+.container {
+    display       : flex;
+    flex-direction: column;
+    margin        : 0.5rem 0;
+}
+
+.container-checkbox {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+.container-submit {
+    display   : flex;
+    margin-top: 1.2rem;
+}
+
+.form {
+    width         : 20rem;
+    display       : flex;
+    flex-direction: column;
+    margin        : 0 auto;
+    padding       : 1rem;
+
+    border       : 1px solid rgba(104, 104, 104, 0.676);
+    border-radius: none;
+}
+
+input {
+    border       : 1px solid rgba(104, 104, 104, 0.676);
+    border-radius: none;
+}
+
+input:hover {
+    border-color: black;
+}
+
+select {
+    border: 1px solid rgba(104, 104, 104, 0.676);
+}
+
+select:hover {
+    border-color: black;
+}
+
+label {
+    margin-bottom: 0.2rem;
+}
+
+.agree {
+    margin-left: 0.5rem;
+}
+
+.text {
+    margin-left: -1.5rem;
+}
+
+.error {
+    border       : 1px solid red;
+    border-radius: none;
+}
+
+.error-message {
+    font-size: 1rem;
+    color    : red;
+}
+
+.form__submit {
+    margin-top      : 0.7rem;
+    padding         : 0.3rem;
+    background-color: rgba(89, 89, 89, 0.692);
+    border          : none;
+
+    color     : rgb(255, 255, 255);
+    transition: all 0.3s;
+    position  : relative;
+    overflow  : hidden;
+    z-index   : 1;
+}
+
+.form__submit:after {
+    content         : "";
+    position        : absolute;
+    bottom          : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: rgba(89, 89, 89, 0.692);
+    z-index         : -2;
+}
+
+.form__submit:before {
+    content         : "";
+    position        : absolute;
+    bottom          : 0;
+    left            : 0;
+    width           : 0%;
+    height          : 100%;
+    background-color: rgba(45, 45, 45, 0.963);
+    transition      : all 0.3s;
+    z-index         : -1;
+}
+
+.form__submit:hover {
+    color: #fff;
+}
+
+.form__submit:hover:before {
+    width: 100%;
+}
